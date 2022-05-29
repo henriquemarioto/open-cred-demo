@@ -27,8 +27,8 @@ export default createGlobalStyle`
         font-size: 100%;
         font: inherit;
         font-family: Helvetica, sans-serif;
-        color: var(--grey-700);
         vertical-align: baseline;
+        background-color: transparent;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -53,11 +53,17 @@ export default createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+    body{
+        background-color: var(--background-color);
+    }
 
     :root{
         --background-color: #F8F9FA;
         --white: #FFFFFF;
         --green: #1FAB89;
-        --grey-700: #2D3748;
+        --gray: #E0E1E2;
+        --gray-500: #A0AEC0;
+        --gray-700: #2D3748;
+
     }
 `;
