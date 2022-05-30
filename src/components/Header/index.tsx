@@ -1,4 +1,5 @@
 import {
+  AccountSection,
   CloseIcon,
   Container,
   ContainerPath,
@@ -12,10 +13,11 @@ import {
   MainSection,
   SubItem,
   SubSection,
+  Title,
 } from "./styles";
 import logo from "../../assets/imgs/logo.png";
 import { FaHome } from "react-icons/fa";
-import { IoIosCard, IoIosCloseCircle, IoIosStats } from "react-icons/io";
+import { IoIosCard, IoIosCloseCircle, IoIosStats, IoMdPerson } from "react-icons/io";
 
 const Header = () => {
   return (
@@ -75,6 +77,28 @@ const Header = () => {
             </ContainerSectionDetails>
           </List>
         </SubSection>
+
+        <AccountSection>
+          <Title>Conta</Title>
+
+          <List>
+            <SubItem>
+              <DivIcon>
+                <IoMdPerson />
+              </DivIcon>
+
+              <span>Rafael</span>
+            </SubItem>
+
+            <SubItem>
+              <DivIcon>
+                <IoIosCard />
+              </DivIcon>
+
+              <span>Configurações</span>
+            </SubItem>
+          </List>
+        </AccountSection>
       </ContainerPath>
     </Container>
   );

@@ -14,14 +14,20 @@ export const Container = styled.header`
 
   .main-selected {
     font-weight: bold;
-    color: var(--gray-700);
     background-color: var(--white);
     box-shadow: 0px 3.500000238418579px 5.500000476837158px 0px #00000005;
+
+    span {
+      color: var(--gray-700);
+    }
   }
 
   .sub-selected {
-    color: var(--gray-700);
     font-weight: bold;
+
+    span {
+      color: var(--gray-700);
+    }
   }
 `;
 
@@ -67,7 +73,6 @@ export const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   gap: 10px;
 `;
@@ -93,13 +98,25 @@ export const List = styled.ul`
   font-size: 12px;
 `;
 
+export const AccountSection = styled(Section)`
+  padding-top: 50px;
+`
+
+export const Title = styled.h2`
+  font-weight: bold;
+  text-align: left;
+`
+
 export const Item = styled.li`
-  color: var(--gray-500);
   display: flex;
   align-items: center;
   gap: 10px;
 
   border-radius: 15px;
+
+  span {
+    color: var(--gray-500);
+  }
 `;
 
 export const MainItem = styled(Item)`
@@ -131,6 +148,7 @@ export const DivIcon = styled.div<Props>`
   svg {
     color: ${(p) =>
       p.iconColor === "white" ? "var(--white)" : "var(--green)"};
-    width: 100%;
+    width: 18px;
+    height: 18px;
   }
 `;

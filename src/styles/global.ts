@@ -7,6 +7,7 @@ export default createGlobalStyle`
     */
     *{
         box-sizing: border-box;
+        
     }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,6 +30,7 @@ export default createGlobalStyle`
         font-family: Helvetica, sans-serif;
         vertical-align: baseline;
         background-color: transparent;
+        color: var(--gray-700);
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -64,6 +66,6 @@ export default createGlobalStyle`
         --gray: #E0E1E2;
         --gray-500: #A0AEC0;
         --gray-700: #2D3748;
-
+        --box-shadow: 0px 3.500000238418579px 5.500000476837158px 0px #00000005;
     }
 `;
