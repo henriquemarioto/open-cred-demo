@@ -69,6 +69,9 @@ export default createGlobalStyle`
         --gray: #E0E1E2;
         --gray-500: #A0AEC0;
         --gray-700: #2D3748;
+        --yellow-100: #EBCC86;
+        --yellow-400: #ECB22E;
+        --red: #F4A0A0;
         --box-shadow: 0px 3.500000238418579px 5.500000476837158px 0px #00000005;
     }
 `;

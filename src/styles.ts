@@ -4,6 +4,7 @@ interface Props {
   bold?: boolean;
   fontSize?: string;
   backgroundColor?: string;
+  flex?: string;
 }
 
 interface AccountInfoContainerProps {
@@ -15,6 +16,10 @@ export const Container = styled.div`
 
   display: flex;
   gap: 30px;
+`;
+
+export const Footer = styled.footer`
+  padding: 50px;
 `;
 
 export const Main = styled.main`
@@ -34,7 +39,7 @@ export const HeaderMain = styled.div`
 export const NavHeader = styled.nav`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 `;
 
 export const Span = styled.span<Props>`
@@ -90,6 +95,9 @@ export const ContainerAbsolute = styled.div`
   position: absolute;
   width: 100%;
   top: -75px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 `;
 
 export const AccountInfo = styled.div`
@@ -109,6 +117,8 @@ export const AccountInfo = styled.div`
   background-color: rgba(250, 250, 250, 0.84);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+
+  box-shadow: var(--box-shadow);
 `;
 
 export const AccountInfoContainer = styled.div<AccountInfoContainerProps>`
@@ -240,7 +250,224 @@ export const ButtonClientBottom = styled.button<Props>`
   border-radius: 10px;
 `;
 
-export const MainSection = styled.section`
+export const ContentSection = styled.section`
   display: flex;
-  gap: 20px;
+  gap: 25px;
+`;
+
+export const ContainerContentItem = styled.div<Props>`
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: ${(p) => p.flex || 1};
+`;
+
+export const ContainerContentItemGraph = styled(ContainerContentItem)`
+  padding: 0;
+  height: 320px;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--green),
+    var(--green)
+  );
+
+  flex-direction: row;
+`;
+
+export const ContainerGraph = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 15px 0 15px 15px;
+  background-color: var(--white);
+`;
+
+export const GreenRightBorder = styled.div`
+  color: var(--white);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25px;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+    width: 10px;
+  }
+`;
+
+export const ContainerItems = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const CardStatusNumber = styled.p<Props>`
+  width: 120px;
+  font-size: 20px;
+  text-align: center;
+  color: var(--white);
+  background-color: ${(p) => p.backgroundColor || "transparent"};
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 20px 15px;
+`;
+
+export const VerticalDivision = styled.div`
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to top, transparent, var(--gray), transparent);
+`;
+
+export const HorizontalDivision = styled.div`
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gray), transparent);
+`;
+
+export const StatusName = styled.p`
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+`;
+
+export const SerasaCard = styled.div<Props>`
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  border-radius: 7px;
+  background-color: ${(p) => p.backgroundColor || "transparent"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 100%;
+  }
+`;
+
+export const SerasaInfo = styled.div<Props>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  > h2 {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  > span {
+    font-size: 6px;
+    color: var(--gray);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    > svg {
+      color: ${(p) => p.backgroundColor};
+      width: 18px;
+      height: 18px;
+    }
+
+    > button {
+      font-size: 8px;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const RestritivosTitle = styled.h2`
+  font-size: 18px;
+  font-weight: bold;
+`;
+
+export const UpdateContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    color: var(--gray);
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    > span {
+      color: var(--gray);
+      font-weight: bold;
+      font-size: 8px;
+    }
+  }
+`;
+
+export const Calendar = styled.section`
+  width: 70%;
+  background-color: var(--green);
+  border-radius: 15px;
+  padding: 5px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    > svg {
+      height: 20px;
+      width: 20px;
+      color: var(--white);
+    }
+  }
+`;
+
+export const CalendarButtons = styled.button`
+  background-color: var(--green);
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px
 `;
