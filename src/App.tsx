@@ -101,7 +101,7 @@ function App() {
                 </DivClientTime>
 
                 <DivClientActions>
-                  <ButtonClientBottom>
+                  <ButtonClientBottom backgroundColor="white">
                     <IoIosCube />
                     Análise
                   </ButtonClientBottom>

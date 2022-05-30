@@ -3,10 +3,11 @@ import styled from "styled-components";
 interface Props {
   bold?: boolean;
   fontSize?: string;
+  backgroundColor?: string;
 }
 
 interface AccountInfoContainerProps {
-    flexDirection?: string
+  flexDirection?: string;
 }
 
 export const Container = styled.div`
@@ -112,8 +113,8 @@ export const AccountInfo = styled.div`
 
 export const AccountInfoContainer = styled.div<AccountInfoContainerProps>`
   display: flex;
-  flex-direction: ${p => p.flexDirection || "row"};
-  gap: 20px;
+  flex-direction: ${(p) => p.flexDirection || "row"};
+  gap: ${(p) => (p.flexDirection === "column" ? 0 : 20)}px;
   height: 100%;
 `;
 
@@ -202,9 +203,11 @@ export const Title = styled.h2`
 
 export const DivClientTime = styled.div`
   display: flex;
+  align-items: center;
   gap: 20px;
   margin-top: auto;
   padding: 30px 0;
+  margin-left: auto;
 
   > div {
     width: 20px;
@@ -214,7 +217,7 @@ export const DivClientTime = styled.div`
   }
 
   span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
   }
 `;
@@ -222,11 +225,19 @@ export const DivClientTime = styled.div`
 export const DivClientActions = styled.div`
   display: flex;
   align-items: center;
+  font-size: 10px;
   gap: 10px;
 `;
 
-export const ButtonClientBottom = styled.button`
-    padding: 10px 20px;
+export const ButtonClientBottom = styled.button<Props>`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: ${(p) => p.backgroundColor || "transparent"};
+  box-shadow: ${(p) => (p.backgroundColor ? "var(--box-shadow)" : "none")};
+  border-radius: 10px;
 `;
 
 export const MainSection = styled.section`
