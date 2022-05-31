@@ -44,17 +44,18 @@ import {
   VerticalDivision,
   SerasaCard,
   SerasaInfo,
-  HorizontalDivision,
   RestritivosTitle,
   UpdateContainer,
   Calendar,
   CalendarButtons,
 } from "./styles";
+import HorizontalDivision from "./components/HorizontalDivision";
 import photo from "./assets/imgs/photo.png";
 import openSafe from "./assets/imgs/opensafe.svg";
 import serasa from "./assets/imgs/serasaexperian.svg";
 import sap from "./assets/imgs/sap.svg";
 import saptext from "./assets/imgs/saptext.svg";
+import PieGraph from "./components/PieGraph";
 
 function App() {
   return (
@@ -179,7 +180,9 @@ function App() {
                   </ContainerItems>
                 </ContainerContentItem>
 
-                <ContainerContentItem></ContainerContentItem>
+                <ContainerContentItem>
+                  <PieGraph />
+                </ContainerContentItem>
 
                 {/* Graphic */}
                 <ContainerContentItemGraph flex="2.5">

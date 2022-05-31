@@ -337,12 +337,6 @@ export const VerticalDivision = styled.div`
   background: linear-gradient(to top, transparent, var(--gray), transparent);
 `;
 
-export const HorizontalDivision = styled.div`
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gray), transparent);
-`;
-
 export const StatusName = styled.p`
   font-size: 18px;
   font-weight: bold;
