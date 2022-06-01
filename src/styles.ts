@@ -88,7 +88,7 @@ export const ContainerContent = styled.div`
 `;
 
 export const ContainerAbsolute = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   top: -75px;
   display: flex;

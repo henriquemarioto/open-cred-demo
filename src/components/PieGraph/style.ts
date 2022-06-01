@@ -33,7 +33,16 @@ export const Percent = styled.span`
   font-weight: bold;
   font-size: 20px;
   position: absolute;
-  width: 100px;
-  left: 30%;
-  top: 45%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 35px;
+  top: 40px;
+
+  background-color: rgba(255, 255, 255, 0.5);
 `;
