@@ -64,7 +64,7 @@ const BarPerformanceGraph = () => {
       return;
     }
 
-    setChartData({
+    const data: ChartData<'bar' | 'line'> = {
       labels: userData.map((item) => item.year),
       datasets: [
         {
@@ -84,9 +84,12 @@ const BarPerformanceGraph = () => {
           data: userData.map((item) => item.gain),
           backgroundColor: ["#2D3748"],
           borderRadius: 5,
+          barPercentage: 0.3
         },
       ],
-    });
+    };
+
+    setChartData(data);
   }, [userData]);
 
   return (

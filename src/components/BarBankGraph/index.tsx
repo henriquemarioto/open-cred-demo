@@ -48,6 +48,7 @@ const BarBankGraph = () => {
                 data: userData.map((item) => item.gain),
                 backgroundColor: ["#2D3748"],
                 borderRadius: 5,
+                barPercentage: 0.6,
               },
             ],
           }}
