@@ -30,7 +30,6 @@ import {
   ContentSection,
   DivClientActions,
   DivClientTime,
-  Footer,
   GreenRightBorder,
   HeaderMain,
   IconButton,
@@ -48,6 +47,7 @@ import {
   UpdateContainer,
   Calendar,
   CalendarButtons,
+  Footer,
 } from "./styles";
 import HorizontalDivision from "./components/HorizontalDivision";
 import photo from "./assets/imgs/photo.png";
@@ -56,6 +56,11 @@ import serasa from "./assets/imgs/serasaexperian.svg";
 import sap from "./assets/imgs/sap.svg";
 import saptext from "./assets/imgs/saptext.svg";
 import PieGraph from "./components/PieGraph";
+import TableDRE from "./components/Tables/TableDRE";
+import TableHistory from "./components/Tables/TableHistory";
+import TableBank from "./components/Tables/TableBank";
+import BarPerformanceGraph from "./components/BarPerformanceGraph";
+import BarBankGraph from "./components/BarBankGraph";
 
 function App() {
   return (
@@ -186,7 +191,9 @@ function App() {
 
                 {/* Graphic */}
                 <ContainerContentItemGraph flex="2.5">
-                  <ContainerGraph></ContainerGraph>
+                  <ContainerGraph>
+                    <TableDRE />
+                  </ContainerGraph>
                   <GreenRightBorder>
                     <img src={openSafe} />
                     <IoIosLock />{" "}
@@ -276,34 +283,46 @@ function App() {
               <ContentSection>
                 {/* Graphic */}
                 <ContainerContentItemGraph flex="2">
-                  <ContainerGraph></ContainerGraph>
+                  <ContainerGraph>
+                    <BarPerformanceGraph />
+                  </ContainerGraph>
                   <GreenRightBorder>
                     <img src={sap} />
                     <FiUpload />
                   </GreenRightBorder>
                 </ContainerContentItemGraph>
 
-                <ContainerContentItem></ContainerContentItem>
+                <ContainerContentItem>
+                  <TableHistory />
+                </ContainerContentItem>
               </ContentSection>
 
               <ContentSection>
                 {/* Graphic */}
                 <ContainerContentItemGraph flex="2">
-                  <ContainerGraph></ContainerGraph>
+                  <ContainerGraph>
+                    <BarBankGraph />
+                  </ContainerGraph>
                   <GreenRightBorder>
                     <img src={sap} />
                     <FiUpload />
                   </GreenRightBorder>
                 </ContainerContentItemGraph>
 
-                <ContainerContentItem></ContainerContentItem>
+                <ContainerContentItem>
+                  <TableBank />
+                </ContainerContentItem>
               </ContentSection>
+
+              <Footer>
+                <span>@ 2022, OpenCred</span>
+                <span>Blog</span>
+                <span>License</span>
+              </Footer>
             </ContainerAbsolute>
           </ContainerContent>
         </Main>
       </Container>
-
-      <Footer></Footer>
     </>
   );
 }

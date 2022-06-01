@@ -6,7 +6,7 @@ interface Props {
 
 export const Container = styled.header`
   padding: 5px;
-  width: 20%;
+  width: 16%;
 
   display: flex;
   flex-direction: column;

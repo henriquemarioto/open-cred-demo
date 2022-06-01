@@ -18,10 +18,6 @@ export const Container = styled.div`
   gap: 30px;
 `;
 
-export const Footer = styled.footer`
-  padding: 50px;
-`;
-
 export const Main = styled.main`
   width: 100%;
 `;
@@ -271,7 +267,7 @@ export const ContainerContentItem = styled.div<Props>`
 
 export const ContainerContentItemGraph = styled(ContainerContentItem)`
   padding: 0;
-  height: 320px;
+  height: 325px;
   border-radius: 15px;
   background: linear-gradient(
     to right,
@@ -289,6 +285,10 @@ export const ContainerGraph = styled.div`
   padding: 10px;
   border-radius: 15px 0 15px 15px;
   background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 export const GreenRightBorder = styled.div`
@@ -406,7 +406,7 @@ export const UpdateContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  > div{
+  > div {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -463,5 +463,19 @@ export const CalendarButtons = styled.button`
 
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  gap: 40px;
+  padding: 10px 0;
+
+  span {
+    color: var(--gray);
+  }
+
+  span:nth-child(2){
+    margin-left: auto;
+  }
 `;
