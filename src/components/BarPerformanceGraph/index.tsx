@@ -1,4 +1,4 @@
-import { Bar } from "react-chartjs-2";
+import { Bar, Chart } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container, ContainerGraph, ContainerNumber, Title } from "./style";
 import getGraphData from "../../utils/getGraphData";
@@ -30,11 +30,21 @@ const BarPerformanceGraph = () => {
       <Title>Histórico de Performance</Title>
 
       <ContainerGraph>
-        <Bar
+        <Chart
           data={{
             labels: userData.map((item) => item.year),
             datasets: [
               {
+                type: "line",
+                label: "Dinheiro",
+                data: userData.map((item) => item.gain),
+                backgroundColor: ["#1FAB8949"],
+                borderColor: "#1FAB89",
+                fill: true,
+                tension: 0.3,
+              },
+              {
+                type: "bar",
                 label: "Dinheiro",
                 data: userData.map((item) => item.gain),
                 backgroundColor: ["#2D3748"],
