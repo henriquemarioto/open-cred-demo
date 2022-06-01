@@ -1,11 +1,11 @@
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container, ContainerNumber } from "./style";
+import getGraphData from "../../utils/getGraphData";
 import { useState } from "react";
-import alterGraphData from "../../utils/getGraphData";
 
 const BarPerformanceGraph = () => {
-  const valuesArray: number[] = alterGraphData(200000, 1500000, 9);
+  const valuesArray: number[] = getGraphData(200000, 1500000, 9);
 
   interface IUserData {
     id: number;
@@ -13,18 +13,20 @@ const BarPerformanceGraph = () => {
     gain: number;
   }
 
-  const [userData, setUserData] = useState<IUserData[]>(
-    valuesArray.map((item, i) => {
-      return {
-        id: i + 1,
-        year: 2014 + i,
-        gain: item,
-      };
-    })
-  );
+   const alterGraphData = () => {
+     return valuesArray.map((item, i) => {
+       return {
+         id: i + 1,
+         year: 2014 + i,
+         gain: item,
+       };
+     });
+   };
+
+  const [userData, setUserData] = useState<IUserData[]>(alterGraphData());
 
   return (
-    <Container>
+    <Container onClick={() => setUserData(alterGraphData())}>
       <Bar
         data={{
           labels: userData.map((item) => item.year),

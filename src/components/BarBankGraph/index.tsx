@@ -2,10 +2,10 @@ import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container } from "./style";
 import { useState } from "react";
-import alterGraphData from "../../utils/getGraphData";
+import getGraphData from "../../utils/getGraphData";
 
 const BarBankGraph = () => {
-  const valuesArray: number[] = alterGraphData(200000, 1500000, 6);
+  const valuesArray: number[] = getGraphData(200000, 1500000, 6);
 
   interface IUserData {
     id: number;
@@ -22,18 +22,20 @@ const BarBankGraph = () => {
     "05/2023",
   ];
 
-  const [userData, setUserData] = useState<IUserData[]>(
-    valuesArray.map((item, i) => {
+  const alterGraphData = () => {
+    return valuesArray.map((item, i) => {
       return {
         id: i + 1,
         date: date[i],
         gain: item,
       };
-    })
-  );
+    });
+  }
+
+  const [userData, setUserData] = useState<IUserData[]>(alterGraphData());
 
   return (
-    <Container>
+    <Container onClick={() => setUserData(alterGraphData())}>
       <Bar
         data={{
           labels: userData.map((item) => item.date),
