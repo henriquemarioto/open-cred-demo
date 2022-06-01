@@ -1,15 +1,18 @@
-import TableModel from "../TableModel"
+import TableModel from "../TableModel";
 
 const TableDRE = () => {
-    return (
-      <TableModel title="Balanço e DRE">
+  return (
+    <TableModel title="Balanço e DRE">
+      <thead>
         <tr>
           <th></th>
           <th>2019</th>
           <th>2020</th>
           <th>2021</th>
         </tr>
+      </thead>
 
+      <tbody>
         <tr>
           <td>Patrimônio Líquido</td>
           <td>R$1.800.340,00</td>
@@ -51,8 +54,9 @@ const TableDRE = () => {
           <td>R$1.800.340,00</td>
           <td>R$1.800.340,00</td>
         </tr>
-      </TableModel>
-    );
-}
+      </tbody>
+    </TableModel>
+  );
+};
 
-export default TableDRE
+export default TableDRE;

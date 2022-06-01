@@ -1,14 +1,17 @@
-import TableModel from "../TableModel"
+import TableModel from "../TableModel";
 
 const TableBank = () => {
-    return (
-      <TableModel title="Dados Bancários">
+  return (
+    <TableModel title="Dados Bancários">
+      <thead>
         <tr>
           <th></th>
           <th>Dólar</th>
           <th>Total</th>
         </tr>
+      </thead>
 
+      <tbody>
         <tr>
           <td>A vencer</td>
           <td>R$1.800.340,00</td>
@@ -50,8 +53,9 @@ const TableBank = () => {
           <td>R$1.800.340,00</td>
           <td>R$1.800.340,00</td>
         </tr>
-      </TableModel>
-    );
-}
+      </tbody>
+    </TableModel>
+  );
+};
 
-export default TableBank
+export default TableBank;

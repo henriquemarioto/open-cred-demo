@@ -17,23 +17,23 @@ export const Container = styled.div`
     font-size: 15px;
     width: 100%;
 
-    > tr {
-        text-align: right;
+    tr {
+      text-align: right;
 
-      > th {
+      th {
         padding: 10px 0;
       }
 
-      > td {
+      td {
         padding: 7px 0;
         border-bottom: 1px solid var(--gray);
       }
 
-      > td:nth-child(1) {
-          text-align: left;
+      td:nth-child(1) {
+        text-align: left;
       }
 
-      > td:nth-child(1n + 2) {
+      td:nth-child(1n + 2) {
         color: var(--gray-500);
       }
     }

@@ -1,14 +1,17 @@
-import TableModel from "../TableModel"
+import TableModel from "../TableModel";
 
 const TableHistory = () => {
-    return (
-      <TableModel title="Histórico">
+  return (
+    <TableModel title="Histórico">
+      <thead>
         <tr>
           <th></th>
           <th>2019</th>
           <th>2020</th>
         </tr>
+      </thead>
 
+      <tbody>
         <tr>
           <td>Pré - pgto</td>
           <td>R$1.800.340,00</td>
@@ -50,8 +53,9 @@ const TableHistory = () => {
           <td>R$1.800.340,00</td>
           <td>R$1.800.340,00</td>
         </tr>
-      </TableModel>
-    );
-}
+      </tbody>
+    </TableModel>
+  );
+};
 
-export default TableHistory
+export default TableHistory;
