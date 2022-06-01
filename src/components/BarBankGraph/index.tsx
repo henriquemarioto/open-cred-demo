@@ -1,6 +1,6 @@
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
-import { Container } from "./style";
+import { Container, ContainerGraph, Title } from "./style";
 import { useState } from "react";
 import getGraphData from "../../utils/getGraphData";
 
@@ -30,35 +30,39 @@ const BarBankGraph = () => {
         gain: item,
       };
     });
-  }
+  };
 
   const [userData, setUserData] = useState<IUserData[]>(alterGraphData());
 
   return (
     <Container onClick={() => setUserData(alterGraphData())}>
-      <Bar
-        data={{
-          labels: userData.map((item) => item.date),
-          datasets: [
-            {
-              label: "Dinheiro",
-              data: userData.map((item) => item.gain),
-              backgroundColor: ["#2D3748"],
-              borderRadius: 5,
+      <Title>Dados Bancários</Title>
+
+      <ContainerGraph>
+        <Bar
+          data={{
+            labels: userData.map((item) => item.date),
+            datasets: [
+              {
+                label: "Dinheiro",
+                data: userData.map((item) => item.gain),
+                backgroundColor: ["#2D3748"],
+                borderRadius: 5,
+              },
+            ],
+          }}
+          options={{
+            maintainAspectRatio: false,
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
             },
-          ],
-        }}
-        options={{
-          maintainAspectRatio: false,
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-          indexAxis: 'y',
-        }}
-      />
+            indexAxis: "y",
+          }}
+        />
+      </ContainerGraph>
     </Container>
   );
 };
