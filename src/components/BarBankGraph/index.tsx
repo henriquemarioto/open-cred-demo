@@ -2,7 +2,7 @@ import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container } from "./style";
 import { useState } from "react";
-import alterGraphData from "../../utils/alterGraphData";
+import alterGraphData from "../../utils/getGraphData";
 
 const BarBankGraph = () => {
   const valuesArray: number[] = alterGraphData(200000, 1500000, 6);

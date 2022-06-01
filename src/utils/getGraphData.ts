@@ -1,6 +1,6 @@
 import getRandomNumber from "./getRandomNumber"
 
-const alterGraphData = (min: number, max: number, loop: number) => {
+const getGraphData = (min: number, max: number, loop: number) => {
     let arr: number[] = []
     
     for(let i = 0; i < loop; i++){
@@ -10,4 +10,4 @@ const alterGraphData = (min: number, max: number, loop: number) => {
     return arr
 }
 
-export default alterGraphData;
+export default getGraphData;
