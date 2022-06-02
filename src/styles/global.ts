@@ -61,6 +61,18 @@ export default createGlobalStyle`
     body{
         background-color: var(--background-color);
     }
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+
+    }
+    ::-webkit-scrollbar-track {
+        background: #f0f0f0;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
 
     :root{
         --background-color: #F8F9FA;
