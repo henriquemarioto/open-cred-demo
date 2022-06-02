@@ -2,11 +2,11 @@
 Site feito para entrevista técnica com a **OpenCred**.
 
 ## Desktop:
-![site img](https://i.postimg.cc/QtQ0Mxpc/open-cred-demo-vercel-app.png)
+![site img](.github/Dektop.png)
 
 ## Gráficos Dinâmicos
 Clique em cima de qualquer gráfico para mudar os valores
-![chart gif](https://i.postimg.cc/RhWSxF6L/Compartilhamento-de-tela-2022-06-02-14h00min28s.gif)
+![chart gif](.github/Dektop.gif)
 
 ## Tecnologias
 Este projeto foi desenvolvido com as seguintes tecnologias:
