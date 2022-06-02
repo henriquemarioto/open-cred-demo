@@ -50,7 +50,7 @@ function App() {
 
         <ContainerContent>
           <ContainerAbsolute>
-            <AccountInfo />
+            
 
             <ContentSection>
               {/* Limite Risco Liquidez */}

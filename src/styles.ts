@@ -7,13 +7,8 @@ interface Props {
   flex?: string;
 }
 
-interface AccountInfoContainerProps {
-  flexDirection?: string;
-}
-
 export const Container = styled.div`
   padding: 25px 30px;
-  min-width: 1366px;
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -23,8 +18,7 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  width: 85%;
-  min-width: 85%;
+  width: 100%;
 `;
 
 export const ContainerContent = styled.div`
