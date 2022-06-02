@@ -3,7 +3,6 @@ import { Container as ContainerContentItem } from "../ContainerContentItem/style
 
 export const Container = styled(ContainerContentItem)`
   padding: 0;
-  height: 325px;
   border-radius: 15px;
   background: linear-gradient(
     to right,

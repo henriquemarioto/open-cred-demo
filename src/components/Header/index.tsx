@@ -23,7 +23,9 @@ const Header = () => {
   return (
     <Container>
       <Img src={logo} />
+
       <DivisionHorizontal />
+      
       <ContainerPath>
         <MainSection>
           <List>

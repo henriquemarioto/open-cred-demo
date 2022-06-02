@@ -13,13 +13,18 @@ interface AccountInfoContainerProps {
 
 export const Container = styled.div`
   padding: 25px 30px;
+  min-width: 1366px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 
   display: flex;
-  gap: 30px;
+  gap: 20px;
 `;
 
 export const Main = styled.main`
-  width: 100%;
+  width: 85%;
+  min-width: 85%;
 `;
 
 export const ContainerContent = styled.div`
@@ -33,12 +38,20 @@ export const ContainerAbsolute = styled.div`
   top: -75px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
+
+  @media (min-width: 1920px) {
+    gap: 25px;
+  }
 `;
 
 export const ContentSection = styled.section`
   display: flex;
-  gap: 25px;
+  gap: 15px;
+
+  @media (min-width: 1920px) {
+    gap: 25px;
+  }
 `;
 
 export const ContainerItems = styled.div`
@@ -49,8 +62,8 @@ export const ContainerItems = styled.div`
 `;
 
 export const SerasaCard = styled.div<Props>`
-  width: 100%;
-  height: 60px;
+  width: 80%;
+  height: 100%;
   padding: 5px;
   border-radius: 7px;
   background-color: ${(p) => p.backgroundColor || "transparent"};
@@ -60,6 +73,7 @@ export const SerasaCard = styled.div<Props>`
 
   img {
     height: 100%;
+    width: 100%;
   }
 `;
 
@@ -87,7 +101,7 @@ export const SerasaInfo = styled.div<Props>`
     gap: 5px;
     > svg {
       color: ${(p) => p.backgroundColor};
-      width: 18px;
+      width: 15px;
       height: 18px;
     }
 
@@ -97,6 +111,10 @@ export const SerasaInfo = styled.div<Props>`
       text-decoration: underline;
       cursor: pointer;
     }
+  }
+
+  @media (min-width: 1920px) {
+
   }
 `;
 

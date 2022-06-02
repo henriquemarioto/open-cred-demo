@@ -8,25 +8,38 @@ export const Container = styled.div`
   align-items: center;
   gap: 15px;
 
-  width: 130px;
-  height: auto;
+  width: 100%;
 
   h2 {
     font-weight: bold;
-    font-size: 20px;
-    padding-top: 20px;
+    font-size: 18px;
+    padding-top: 10px;
   }
 
-  >span {
-    font-size: 16px;
+  > span {
+    font-size: 14px;
     font-weight: bold;
     color: var(--gray-500);
+  }
+
+  @media (min-width: 1920px) {
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      padding-top: 20px;
+    }
+
+    > span {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--gray-500);
+    }
   }
 `;
 
 export const GraphContainer = styled.div`
     position: relative;
-    width: 100%;
+    width: 130px;
 `;
 
 export const Percent = styled.span`

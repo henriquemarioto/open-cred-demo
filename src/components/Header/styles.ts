@@ -6,7 +6,7 @@ interface Props {
 
 export const Container = styled.header`
   padding: 5px;
-  width: 16%;
+  width: 15%;
 
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ export const Container = styled.header`
   .main-selected {
     font-weight: bold;
     background-color: var(--white);
-    box-shadow: 0px 3.500000238418579px 5.500000476837158px 0px #00000005;
+    box-shadow: var(--box-shadow);
 
     span {
       color: var(--gray-700);
@@ -32,7 +32,7 @@ export const Container = styled.header`
 `;
 
 export const Img = styled.img`
-  width: 170px;
+  width: 75%;
 `;
 
 export const DivisionHorizontal = styled.div`
@@ -80,13 +80,17 @@ export const Section = styled.section`
 export const MainSection = styled(Section)``;
 
 export const SubSection = styled(Section)`
-  padding-left: 20px;
+  padding-left: 15px;
 
   color: var(--gray-500);
 
-  .top{
+  .top {
     padding: 0;
     padding-top: 10px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-left: 20px;
   }
 `;
 
@@ -95,23 +99,28 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   //gap: 10px;
-  font-size: 12px;
+  font-size: 10px;
+
+  @media (min-width: 1920px) {
+    font-size: 12px;
+  }
 `;
 
 export const AccountSection = styled(Section)`
   padding-top: 50px;
-`
+`;
 
 export const Title = styled.h2`
   font-weight: bold;
   text-align: left;
-`
+`;
 
 export const Item = styled.li`
   display: flex;
   align-items: center;
   gap: 10px;
-
+  
+  width: 100%;
   border-radius: 15px;
 
   span {
@@ -120,23 +129,33 @@ export const Item = styled.li`
 `;
 
 export const MainItem = styled(Item)`
-  padding: 20px;
+  padding: 10px;
   width: 100%;
+  font-size: 12px;
+
+  @media (min-width: 1920px) {
+    padding: 20px;
+    font-size: 16px;
+  }
 `;
 
 export const SubItem = styled(Item)`
   padding: 10px 0;
-`
+`;
 
 export const ContainerSectionDetails = styled.div`
   display: flex;
-  margin-left: 15px;
+  margin-left: 10px;
   border-left: 1px solid var(--gray);
-`
+
+  @media (min-width: 1920px) {
+    margin-left: 15px;
+  }
+`;
 
 export const DivIcon = styled.div<Props>`
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   background-color: ${(p) =>
     p.iconColor === "white" ? "var(--green)" : "var(--white)"};
   border-radius: 12px;

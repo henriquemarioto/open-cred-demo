@@ -7,14 +7,14 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 
   h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   table {
-    font-size: 15px;
+    font-size: 10px;
     width: 100%;
 
     tr {
@@ -25,7 +25,7 @@ export const Container = styled.div`
       }
 
       td {
-        padding: 7px 0;
+        padding: 6px 0;
         border-bottom: 1px solid var(--gray);
       }
 
@@ -35,6 +35,24 @@ export const Container = styled.div`
 
       td:nth-child(1n + 2) {
         color: var(--gray-500);
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    gap: 20px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    table {
+      font-size: 15px;
+
+      tr {
+        td {
+          padding: 7px 0;
+        }
       }
     }
   }
