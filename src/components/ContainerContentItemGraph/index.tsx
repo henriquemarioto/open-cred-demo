@@ -6,7 +6,7 @@ import { Container, ContainerGraph, GreenRightBorder } from "./styles";
 interface Props {
   children?: ReactNode;
   flex?: string;
-  icon: any;
+  icon?: ReactElement;
   textSvg: string;
 }
 

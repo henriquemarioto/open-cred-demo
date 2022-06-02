@@ -66,7 +66,7 @@ function App() {
               {/* DRE Table */}
               <ContainerContentItemGraph
                 flex="2.5"
-                icon={IoIosLock}
+                icon={<IoIosLock />}
                 textSvg={openSafe}
               >
                 <TableDRE />
@@ -141,7 +141,7 @@ function App() {
 
             <ContentSection>
               {/* Graphic Performance */}
-              <ContainerContentItemGraph flex="2" icon={FiUpload} textSvg={sap}>
+              <ContainerContentItemGraph flex="2" icon={<FiUpload />} textSvg={sap}>
                 <BarPerformanceGraph />
               </ContainerContentItemGraph>
               {/* History table */}
@@ -152,7 +152,7 @@ function App() {
 
             <ContentSection>
               {/* Graphic Bank */}
-              <ContainerContentItemGraph flex="2" icon={FiUpload} textSvg={sap}>
+              <ContainerContentItemGraph flex="2" icon={<FiUpload />} textSvg={sap}>
                 <BarBankGraph />
               </ContainerContentItemGraph>
 
