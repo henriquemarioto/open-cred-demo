@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import profileBackground from "/src/assets/imgs/profile-background.png"
 
 interface Props {
   bold?: boolean;
@@ -13,7 +14,7 @@ export const Container = styled.div`
   padding: 20px;
   border-radius: 15px;
   background-color: var(--green);
-  background-image: url("/src/assets/imgs/profile-background.png");
+  background-image: url(${profileBackground});
   background-size: 100% 300px;
 `;
 
