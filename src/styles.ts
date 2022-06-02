@@ -148,46 +148,6 @@ export const UpdateContainer = styled.div`
   }
 `;
 
-export const Calendar = styled.section`
-  width: 70%;
-  background-color: var(--green);
-  border-radius: 15px;
-  padding: 5px;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-
-  > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 10px;
-
-    > svg {
-      height: 20px;
-      width: 20px;
-      color: var(--white);
-    }
-  }
-`;
-
-export const CalendarButtons = styled.button`
-  background-color: var(--green);
-  padding: 7px 20px;
-  border-radius: 20px;
-  border: 2px solid var(--white);
-  color: var(--white);
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
 export const Footer = styled.footer`
   display: flex;
   gap: 40px;

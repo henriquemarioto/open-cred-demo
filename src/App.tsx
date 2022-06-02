@@ -1,13 +1,3 @@
-import { AiOutlineReload } from "react-icons/ai";
-import {
-  FiCheckCircle,
-  FiMinusCircle,
-  FiSlash,
-  FiUpload,
-} from "react-icons/fi";
-import { GoTriangleDown } from "react-icons/go";
-import { BsFillCalendar2WeekFill } from "react-icons/bs";
-import { IoIosLock } from "react-icons/io";
 import Header from "./components/Header";
 import {
   Container,
@@ -20,13 +10,10 @@ import {
   SerasaInfo,
   RestritivosTitle,
   UpdateContainer,
-  Calendar,
-  CalendarButtons,
   Footer,
 } from "./styles";
+
 import HorizontalDivision from "./components/HorizontalDivision";
-import openSafe from "./assets/imgs/opensafe.svg";
-import serasa from "./assets/imgs/serasaexperian.svg";
 import sap from "./assets/imgs/sap.svg";
 import PieGraph from "./components/Charts/PieGraph";
 import TableDRE from "./components/Tables/TableDRE";
@@ -39,6 +26,19 @@ import AccountInfo from "./components/AccountInfo";
 import BankData from "./components/BankData";
 import ContainerContentItem from "./components/ContainerContentItem";
 import ContainerContentItemGraph from "./components/ContainerContentItemGraph";
+import Calendar from "./components/Calendar";
+
+import openSafe from "./assets/imgs/opensafe.svg";
+import serasa from "./assets/imgs/serasaexperian.svg";
+
+import { AiOutlineReload } from "react-icons/ai";
+import {
+  FiCheckCircle,
+  FiMinusCircle,
+  FiSlash,
+  FiUpload,
+} from "react-icons/fi";
+import { IoIosLock } from "react-icons/io";
 
 function App() {
   return (
@@ -137,24 +137,7 @@ function App() {
             <HorizontalDivision />
             <HorizontalDivision />
             {/* center calendar */}
-            <Calendar>
-              <div>
-                <CalendarButtons>Ano atual</CalendarButtons>
-                <CalendarButtons>Histórico</CalendarButtons>
-              </div>
-
-              <div>
-                <BsFillCalendar2WeekFill />
-                <CalendarButtons>
-                  <GoTriangleDown />
-                  Jan 2021
-                </CalendarButtons>
-                <CalendarButtons>
-                  <GoTriangleDown />
-                  Dec 2021
-                </CalendarButtons>
-              </div>
-            </Calendar>
+            <Calendar />
 
             <ContentSection>
               {/* Graphic Performance */}
