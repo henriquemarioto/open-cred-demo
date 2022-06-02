@@ -1,5 +1,5 @@
 # OpenCred
-Site feito para entrevista técnica com a **OpenCred**.
+Site feito para entrevista técnica com a **OpenCred**. <br />
 Link da aplicação: https://open-cred-demo.vercel.app/
 
 ## Desktop:
