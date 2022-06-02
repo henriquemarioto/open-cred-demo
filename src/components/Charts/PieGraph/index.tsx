@@ -1,9 +1,9 @@
 import { Pie } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container, GraphContainer, Percent } from "./style";
-import HorizontalDivision from "../HorizontalDivision";
+import HorizontalDivision from "../../HorizontalDivision";
 import { useState } from "react";
-import getRandomNumber from "../../utils/getRandomNumber";
+import getRandomNumber from "../../../utils/getRandomNumber";
 
 const PieGraph = () => {
   interface IData {

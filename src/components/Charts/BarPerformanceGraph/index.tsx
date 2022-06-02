@@ -11,7 +11,7 @@ import {
 } from "chart.js";
 import "chart.js/auto";
 import { Container, ContainerGraph, ContainerNumber, Title } from "./style";
-import getGraphData from "../../utils/getGraphData";
+import getGraphData from "../../../utils/getGraphData";
 import { useEffect, useRef, useState } from "react";
 
 const BarPerformanceGraph = () => {

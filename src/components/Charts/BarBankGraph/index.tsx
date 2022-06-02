@@ -2,7 +2,7 @@ import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 import { Container, ContainerGraph, Title } from "./style";
 import { useState } from "react";
-import getGraphData from "../../utils/getGraphData";
+import getGraphData from "../../../utils/getGraphData";
 
 const BarBankGraph = () => {
   const valuesArray: number[] = getGraphData(200000, 1500000, 6);
