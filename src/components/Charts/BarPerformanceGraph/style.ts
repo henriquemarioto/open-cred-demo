@@ -2,13 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   gap: 15px;
-  width: 880px;
   height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContainerContent = styled.div`
+  display: flex;
+  height: 100%;
+
 `;
 
 export const ContainerGraph = styled.div`
   position: relative;
-  height: 95%;
+  height: 94%;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -16,14 +26,17 @@ export const ContainerGraph = styled.div`
 `;
 
 export const ContainerNumber = styled.div`
+  min-width: 40px;
   height: 100%;
-  padding: 25px 0;
+  padding: 30px 0;
+
   font-size: 14px;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+
 `;
 
 export const Title = styled.h2`

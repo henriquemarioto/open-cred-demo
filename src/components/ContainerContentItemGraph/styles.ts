@@ -33,7 +33,7 @@ export const GreenRightBorder = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 25px;
+  min-width: 25px;
   height: 100%;
   border-radius: 0 15px 15px 0;
 

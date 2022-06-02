@@ -10,7 +10,13 @@ import {
   Legend,
 } from "chart.js";
 import "chart.js/auto";
-import { Container, ContainerGraph, ContainerNumber, Title } from "./style";
+import {
+  Container,
+  ContainerContent,
+  ContainerGraph,
+  ContainerNumber,
+  Title,
+} from "./style";
 import getGraphData from "../../../utils/getGraphData";
 import { useEffect, useRef, useState } from "react";
 
@@ -54,7 +60,7 @@ const BarPerformanceGraph = () => {
 
   const [userData, setUserData] = useState<IUserData[]>(alterGraphData());
   const [chartData, setChartData] = useState<ChartData<any>>({
-    datasets: []
+    datasets: [],
   });
 
   useEffect(() => {
@@ -64,7 +70,7 @@ const BarPerformanceGraph = () => {
       return;
     }
 
-    const data: ChartData<'bar' | 'line'> = {
+    const data: ChartData<"bar" | "line"> = {
       labels: userData.map((item) => item.year),
       datasets: [
         {
@@ -84,7 +90,7 @@ const BarPerformanceGraph = () => {
           data: userData.map((item) => item.gain),
           backgroundColor: ["#2D3748"],
           borderRadius: 5,
-          barPercentage: 0.3
+          barPercentage: 0.3,
         },
       ],
     };
@@ -96,16 +102,18 @@ const BarPerformanceGraph = () => {
     <Container onClick={() => setUserData(alterGraphData())}>
       <Title>Histórico de Performance</Title>
 
-      <ContainerGraph>
-        <Chart
-          ref={chartRef}
-          type={"line"}
-          data={chartData}
-          options={{
-            maintainAspectRatio: false,
-            responsive: true,
-          }}
-        />
+      <ContainerContent>
+        <ContainerGraph>
+          <Chart
+            ref={chartRef}
+            type={"line"}
+            data={chartData}
+            options={{
+              maintainAspectRatio: false,
+              responsive: true,
+            }}
+          />
+        </ContainerGraph>
         <ContainerNumber>
           <p>100%</p>
           <p>90%</p>
@@ -116,7 +124,7 @@ const BarPerformanceGraph = () => {
           <p>15%</p>
           <p>0%</p>
         </ContainerNumber>
-      </ContainerGraph>
+      </ContainerContent>
     </Container>
   );
 };
