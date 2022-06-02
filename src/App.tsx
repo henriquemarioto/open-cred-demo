@@ -1,46 +1,21 @@
-import { FaBell, FaPen, FaPlus } from "react-icons/fa";
+import { AiOutlineReload } from "react-icons/ai";
 import {
-  IoIosCube,
-  IoIosLock,
-  IoIosSearch,
-  IoMdPerson,
-  IoMdSettings,
-} from "react-icons/io";
-import { VscGraphLine } from "react-icons/vsc";
-import { AiFillTool, AiOutlineReload } from "react-icons/ai";
-import { FiCheckCircle, FiMinusCircle, FiSlash, FiUpload } from "react-icons/fi";
+  FiCheckCircle,
+  FiMinusCircle,
+  FiSlash,
+  FiUpload,
+} from "react-icons/fi";
 import { GoTriangleDown } from "react-icons/go";
 import { BsFillCalendar2WeekFill } from "react-icons/bs";
+import { IoIosLock } from "react-icons/io";
 import Header from "./components/Header";
 import {
-  AccountInfo,
-  AccountInfoContainer,
-  ButtonClientBottom,
-  ButtonSolicitar,
-  CardStatusNumber,
   Container,
   ContainerAbsolute,
   ContainerContent,
-  ContainerContentItem,
-  ContainerContentItemGraph,
-  ContainerGraph,
-  ContainerInfo,
-  ContainerPhoto,
   ContainerItems,
   ContentSection,
-  DivClientActions,
-  DivClientTime,
-  GreenRightBorder,
-  HeaderMain,
-  IconButton,
-  Input,
-  InputContainer,
   Main,
-  NavHeader,
-  Span,
-  StatusName,
-  Title,
-  VerticalDivision,
   SerasaCard,
   SerasaInfo,
   RestritivosTitle,
@@ -50,17 +25,20 @@ import {
   Footer,
 } from "./styles";
 import HorizontalDivision from "./components/HorizontalDivision";
-import photo from "./assets/imgs/photo.png";
 import openSafe from "./assets/imgs/opensafe.svg";
 import serasa from "./assets/imgs/serasaexperian.svg";
 import sap from "./assets/imgs/sap.svg";
-import saptext from "./assets/imgs/saptext.svg";
 import PieGraph from "./components/PieGraph";
 import TableDRE from "./components/Tables/TableDRE";
 import TableHistory from "./components/Tables/TableHistory";
 import TableBank from "./components/Tables/TableBank";
 import BarPerformanceGraph from "./components/BarPerformanceGraph";
 import BarBankGraph from "./components/BarBankGraph";
+import HeaderMain from "./components/HeaderMain";
+import AccountInfo from "./components/AccountInfo";
+import BankData from "./components/BankData";
+import ContainerContentItem from "./components/ContainerContentItem";
+import ContainerContentItemGraph from "./components/ContainerContentItemGraph";
 
 function App() {
   return (
@@ -69,139 +47,35 @@ function App() {
         <Header />
 
         <Main>
-          <HeaderMain>
-            <NavHeader>
-              <Span>Pages / Profile</Span>
-
-              <InputContainer>
-                <IoIosSearch />
-                <Input placeholder="Type here..." />
-              </InputContainer>
-
-              <IconButton bold>
-                <IoMdPerson size={20} />
-                Rafael
-              </IconButton>
-
-              <IconButton>
-                <IoMdSettings />
-              </IconButton>
-
-              <IconButton>
-                <FaBell />
-              </IconButton>
-            </NavHeader>
-            <Span bold fontSize="16">
-              Profile
-            </Span>
-          </HeaderMain>
+          <HeaderMain />
 
           <ContainerContent>
             <ContainerAbsolute>
-              <AccountInfo>
-                <AccountInfoContainer>
-                  <ContainerPhoto>
-                    <div>
-                      <img src={photo} />
-                      <IconButton>
-                        <FaPen />
-                      </IconButton>
-                    </div>
-                  </ContainerPhoto>
-
-                  <ContainerInfo>
-                    <Title>PRODUTOR RURAL</Title>
-                    <span>gabriel@agromais.com.br</span>
-                    <span>CPF: 12.345.678-9</span>
-                  </ContainerInfo>
-
-                  <ContainerInfo>
-                    <ButtonSolicitar>
-                      <div>
-                        <FaPlus />
-                      </div>
-                      Solicitar crédito
-                    </ButtonSolicitar>
-                  </ContainerInfo>
-                </AccountInfoContainer>
-
-                <AccountInfoContainer flexDirection="column">
-                  <DivClientTime>
-                    <div></div>
-                    <span>Client desde</span>
-                    <span>24/07/2018</span>
-                  </DivClientTime>
-
-                  <DivClientActions>
-                    <ButtonClientBottom backgroundColor="white">
-                      <IoIosCube />
-                      Análise
-                    </ButtonClientBottom>
-
-                    <ButtonClientBottom>
-                      <VscGraphLine />
-                      Balanço
-                    </ButtonClientBottom>
-
-                    <ButtonClientBottom>
-                      <AiFillTool />
-                      Configurações
-                    </ButtonClientBottom>
-                  </DivClientActions>
-                </AccountInfoContainer>
-              </AccountInfo>
+              <AccountInfo />
 
               <ContentSection>
                 {/* Limite Risco Liquidez */}
                 <ContainerContentItem>
-                  <ContainerItems>
-                    <CardStatusNumber backgroundColor="var(--yellow-100)">
-                      R$ 1.5 M
-                    </CardStatusNumber>
-
-                    <VerticalDivision />
-
-                    <StatusName>Limite</StatusName>
-                  </ContainerItems>
-
-                  <ContainerItems>
-                    <CardStatusNumber backgroundColor="var(--red)">
-                      R$ 1.2 M
-                    </CardStatusNumber>
-
-                    <VerticalDivision />
-
-                    <StatusName>Risco</StatusName>
-                  </ContainerItems>
-
-                  <ContainerItems>
-                    <CardStatusNumber backgroundColor="var(--gray-500)">
-                      X %
-                    </CardStatusNumber>
-
-                    <VerticalDivision />
-
-                    <StatusName>Liquidez</StatusName>
-                  </ContainerItems>
+                  <BankData />
                 </ContainerContentItem>
 
+                {/* Pie chart */}
                 <ContainerContentItem>
                   <PieGraph />
                 </ContainerContentItem>
 
-                {/* Graphic */}
-                <ContainerContentItemGraph flex="2.5">
-                  <ContainerGraph>
-                    <TableDRE />
-                  </ContainerGraph>
-                  <GreenRightBorder>
-                    <img src={openSafe} />
-                    <IoIosLock />{" "}
-                  </GreenRightBorder>
+                {/* DRE Table */}
+                <ContainerContentItemGraph
+                  flex="2.5"
+                  icon={IoIosLock}
+                  textSvg={openSafe}
+                >
+                  <TableDRE />
                 </ContainerContentItemGraph>
 
                 {/* Serasa */}
                 <ContainerContentItem>
+                  {/* green */}
                   <ContainerItems>
                     <SerasaCard backgroundColor="var(--green)">
                       <img src={serasa} />
@@ -216,6 +90,7 @@ function App() {
                     </SerasaInfo>
                   </ContainerItems>
 
+                  {/* yellow */}
                   <ContainerItems>
                     <SerasaCard backgroundColor="var(--yellow-400)">
                       <img src={serasa} />
@@ -231,6 +106,7 @@ function App() {
                     </SerasaInfo>
                   </ContainerItems>
 
+                  {/* gray */}
                   <ContainerItems>
                     <SerasaCard backgroundColor="var(--gray)">
                       <img src={serasa} />
@@ -258,9 +134,10 @@ function App() {
                 </ContainerContentItem>
               </ContentSection>
 
+              {/* center division */}
               <HorizontalDivision />
               <HorizontalDivision />
-
+              {/* center calendar */}
               <Calendar>
                 <div>
                   <CalendarButtons>Ano atual</CalendarButtons>
@@ -281,39 +158,37 @@ function App() {
               </Calendar>
 
               <ContentSection>
-                {/* Graphic */}
-                <ContainerContentItemGraph flex="2">
-                  <ContainerGraph>
-                    <BarPerformanceGraph />
-                  </ContainerGraph>
-                  <GreenRightBorder>
-                    <img src={sap} />
-                    <FiUpload />
-                  </GreenRightBorder>
+                {/* Graphic Performance */}
+                <ContainerContentItemGraph
+                  flex="2"
+                  icon={FiUpload}
+                  textSvg={sap}
+                >
+                  <BarPerformanceGraph />
                 </ContainerContentItemGraph>
-
+                {/* History table */}
                 <ContainerContentItem>
                   <TableHistory />
                 </ContainerContentItem>
               </ContentSection>
 
               <ContentSection>
-                {/* Graphic */}
-                <ContainerContentItemGraph flex="2">
-                  <ContainerGraph>
-                    <BarBankGraph />
-                  </ContainerGraph>
-                  <GreenRightBorder>
-                    <img src={sap} />
-                    <FiUpload />
-                  </GreenRightBorder>
+                {/* Graphic Bank */}
+                <ContainerContentItemGraph
+                  flex="2"
+                  icon={FiUpload}
+                  textSvg={sap}
+                >
+                  <BarBankGraph />
                 </ContainerContentItemGraph>
 
+                {/* Bank table */}
                 <ContainerContentItem>
                   <TableBank />
                 </ContainerContentItem>
               </ContentSection>
 
+              {/* Footer */}
               <Footer>
                 <span>@ 2022, OpenCred</span>
                 <span>Blog</span>
