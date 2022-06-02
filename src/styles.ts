@@ -15,6 +15,19 @@ export const Container = styled.div`
 
   display: flex;
   gap: 20px;
+  transition: 0.2s;
+
+  animation: animacao 1s;
+
+  @keyframes animacao {
+    from {
+      opacity: 0;
+      transform: translate(200px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Main = styled.main`
